@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import "./Bookings.css";
 import emailjs from "emailjs-com";
+import { FaMapMarkerAlt } from "react-icons/fa"; // Importing the location icon
 
 const Booking = () => {
  const form = useRef();
@@ -25,13 +26,19 @@ const Booking = () => {
    );
   e.target.reset();
  };
+
  return (
   <section className="book" id="book">
    <h1 className="heading">
     booking <span>reserve a table</span>
    </h1>
 
-   <form>
+   <div className="location-container">
+    <FaMapMarkerAlt className="location-icon" />
+    <span>Hyderabad</span>
+   </div>
+
+   <form onSubmit={sendEmail} ref={form}>
     <input type="text" name="name" placeholder="Name" className="box" />
     <input type="email" name="email" placeholder="Email" className="box" />
     <input type="number" name="number" placeholder="Number" className="box" />
@@ -43,12 +50,7 @@ const Booking = () => {
      rows="10"
      name="message"
     ></textarea>
-    <input
-     type="submit"
-     value="send message"
-     className="btn"
-     onSubmit={sendEmail}
-    />
+    <input type="submit" value="send message" className="btn" />
    </form>
   </section>
  );

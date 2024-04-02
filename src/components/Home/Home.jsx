@@ -11,7 +11,7 @@ const Home = () => {
   <section className="home" id="home">
    <div className="row">
     <div className="content">
-     <h3>fresh coffee in the morning</h3>
+     <h3>The best way to start your day!</h3>
      <a href="#book" className="btn">
       buy one now
      </a>

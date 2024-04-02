@@ -2,8 +2,20 @@
  background: url(../../assests/book-bg.jpg);
  background-position: center;
  background-size: cover;
+ padding: 2rem 9%;
 }
 
+.location-container {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-bottom: 1rem;
+ font-size: 3rem;
+}
+
+.location-icon {
+ margin-right: 0.5rem;
+}
 .book form {
  margin: 0 auto 2rem auto;
  max-width: 60rem;
